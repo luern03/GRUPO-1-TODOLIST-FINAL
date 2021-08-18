@@ -39,9 +39,9 @@ body {
 
 .container {
     position: absolute;
-    top: 20%;
-    right: 20%;
-    height: 60%;
+    top: 30%;
+    right: 50%;
+    height: 50%;
 }
 
 .btn {
