@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></script>
 </head>
-<body>
+<body background="fondo2.jpg">
+    
     <?php require_once 'process.php'; ?>
 
     <?php
@@ -86,4 +87,20 @@
     </div>
     </div>
 </body>
+<div class="col-md-4 col-sm-4">
+                   <div class="google-map">
+<!-- How to change your own map point
+      1. Go to Google Maps
+      2. Click on your location point
+      3. Click "Share" and choose "Embed map" tab
+      4. Copy only URL and paste it within the src="" field below
+-->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d197.2124047324771!2d-72.8827741876743!3d-13.63623890395675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x916d02decc4e058d%3A0xdf1b91644e72bc66!2sJr.%20Lima%2C%20Abancay%2003001!5e1!3m2!1ses!2spe!4v1628640993998!5m2!1ses!2spe" width="200" height="200" rigth="200"style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                   </div>
+              </div>
+
+         </div>
+    </div>
+
+</section>
 </html>
