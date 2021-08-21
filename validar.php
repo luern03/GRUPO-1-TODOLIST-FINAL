@@ -5,7 +5,7 @@ session_start();
 $_SESSION['correo']=$correo;
 
 
-$conexion=mysqli_connect("localhost", "root", "1234", "registro");
+$conexion=mysqli_connect("localhost", "root", "", "registro");
 
 $consulta=("SELECT * FROM usuario WHERE  correo='$correo' and contraseña='$contraseña'");
 $resultado=mysqli_query($conexion,$consulta);

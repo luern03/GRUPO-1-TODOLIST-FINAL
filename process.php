@@ -2,7 +2,7 @@
 
 session_start();
 
-$mysqli = new mysqli('localhost', 'root', '1234', 'crud') or die(mysqli_error($mysqli));
+$mysqli = new mysqli('localhost', 'root', '', 'crud') or die(mysqli_error($mysqli));
 
 $id = 0;
 $update = false;
@@ -48,7 +48,7 @@ if (isset($_POST['update'])){
     $id = $_POST['id'];
     $name = $_POST['name'];
     $location = $_POST['location'];
-    $anio = $POST['anio'];
+    $anio = $_POST['anio'];
 
     $mysqli->query("UPDATE data SET name='$name', location='$location', anio='$anio' WHERE id=$id") or die($mysqli->error);
 
