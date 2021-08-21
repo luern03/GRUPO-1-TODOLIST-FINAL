@@ -27,7 +27,7 @@
     <?php endif ?>
     <div class="container">
     <?php
-        $mysqli = new mysqli('localhost', 'root', '', 'crud') or die(mysqli_error($mysqli));
+        $mysqli = new mysqli('localhost', 'root', '1234', 'crud') or die(mysqli_error($mysqli));
         $result = $mysqli->query("SELECT * FROM data") or die($mysqli->error);
         //pre_r($result);
         ?>
@@ -37,6 +37,7 @@
                     <tr>
                         <th>Nombre</th>
                         <th>Tarea</th>
+                        <th>Año</th>
                         <th colspan="2">Acciones</th>
                     </tr>
                 </thead>
@@ -45,6 +46,7 @@
                 <tr>
                     <td><?php echo $row['name']; ?></td>
                     <td><?php echo $row['location']; ?></td>
+                    <td><?php echo $row['anio']; ?></td>
                     <td>
                         <a href="indexT.php?edit=<?php echo $row['id']; ?>"
                             class="btn btn-info">Editar</a>
@@ -75,6 +77,10 @@
         <input type="text" name="location" class="form-control" value="<?php echo $location; ?>" placeholder="Ingrese su tarea" required>
         </div>
         <div class="form-group">
+        <label>Año</label>
+        <input type="text" name="anio" class="form-control" value="<?php echo $anio; ?>" placeholder="Ingresa el año" required>
+        </div>
+        <div class="form-group">
         <?php
         if ($update == true):
         ?>
@@ -82,10 +88,15 @@
         <?php else: ?>   
         <button type="submit" class="btn btn-primary" name="save">Crear</button>
         <?php endif; ?>
-        </div>        
+        </div>
+                
     </form>
+    
     </div>
+    <center><a href="index.html" class="btn btn-danger" >Cerrar sesion</a></center>
+    
     </div>
+    
 </body>
 <div class="col-md-4 col-sm-4">
                    <div class="google-map">
